@@ -1,0 +1,19 @@
+server:
+  port: 10000
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3309/my12306?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: Root123;
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 1
+    minIdle: 1
+    maxActive: 1
+    maxWait: 100
+mybatis:
+  check-config-location: true
+  config-location: classpath:mybatis/config/mybatis-config.xml
+  mapper-locations:
+  - classpath:mybatis/mapper/*-mapper.xml
+  type-aliases-package: com.xywei.domain
