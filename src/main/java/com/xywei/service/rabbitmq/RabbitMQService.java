@@ -38,14 +38,15 @@ public class RabbitMQService {
 	 * @Datetime 2021年1月4日 下午6:16:25<br/>
 	 */
 	@RabbitListener(bindings = {
-			@QueueBinding(
-					value=@Queue, 
-					exchange = @Exchange(name ="${rabbitmq.exchange.com.12306.ticket.client2server}", type = "direct"),
-					key = {"${rabbitmq.routingkey.com.12306.ticket.client2server}"})
-	})
+			@QueueBinding(value = @Queue, exchange = @Exchange(name = "${rabbitmq.exchange.com.12306.ticket.client2server}", type = "direct"), key = {
+					"${rabbitmq.routingkey.com.12306.ticket.client2server}" }) })
 	public void receiveFromRabbitMQ(int userId) {
+
 		// 获取userId，处理逻辑
 		UserResult result = ticketService.Tickethandle(userId);
-		System.out.println(result);
+
+		System.out.println("抢票结果：" + result);
+		// 把抢票的结果写回队列
+		rabbitTemplate.convertAndSend(exchangeServer2Client, routingKeyServer2Client, result);
 	}
 }

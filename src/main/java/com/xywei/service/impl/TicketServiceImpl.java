@@ -37,13 +37,13 @@ public class TicketServiceImpl implements TicketService {
 				ticketMapper.ticketDecrease();
 				int insertCount = orderMapper.insertOrderRecord(userId);
 //				Thread.sleep(2000);
-				userResult = new UserResult(userId, "buy ticket success!" + insertCount);
+				userResult = new UserResult(userId, "buy ticket success!" + insertCount, 200);
 				System.out.println("ok: " + Thread.currentThread().getName());
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		} else {
-			userResult = new UserResult(userId, "sorry!tickets are sell out!");
+			userResult = new UserResult(userId, "sorry!tickets are sell out!", 500);
 		}
 		return userResult;
 	}
