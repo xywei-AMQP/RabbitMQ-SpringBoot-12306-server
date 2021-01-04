@@ -6,4 +6,7 @@
 	<select id="ticketFind" resultType="Ticket">
 		select * from t_ticket
 	</select>
+	<update id="ticketDecrease">
+	    update t_ticket set ticket_count=ticket_count-1
+	</update>
 </mapper>

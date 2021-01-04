@@ -6,6 +6,9 @@ spring:
     url: jdbc:mysql://localhost:3309/my12306?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai
     username: root
     password: Root123;
+    initialization-mode: always
+    schema:
+    - classpath:sql/schema-all.sql
     type: com.alibaba.druid.pool.DruidDataSource
     initialSize: 1
     minIdle: 1

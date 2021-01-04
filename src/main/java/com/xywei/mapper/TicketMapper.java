@@ -8,4 +8,6 @@ import com.xywei.domain.Ticket;
 public interface TicketMapper {
 
 	Ticket ticketFind();
+	
+	void ticketDecrease();
 }
