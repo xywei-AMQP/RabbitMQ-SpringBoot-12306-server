@@ -1,4 +1,4 @@
-package com.xywei.server;
+package com.xywei.service;
 
 import com.xywei.domain.Ticket;
 import com.xywei.vo.UserResult;

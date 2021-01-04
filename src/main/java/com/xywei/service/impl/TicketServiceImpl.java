@@ -1,4 +1,4 @@
-package com.xywei.server.impl;
+package com.xywei.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.xywei.domain.Ticket;
 import com.xywei.mapper.OrderMapper;
 import com.xywei.mapper.TicketMapper;
-import com.xywei.server.TicketService;
+import com.xywei.service.TicketService;
 import com.xywei.vo.UserResult;
 
 @Service

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.xywei.server.TicketService;
+import com.xywei.service.TicketService;
 import com.xywei.vo.UserResult;
 
 @RestController

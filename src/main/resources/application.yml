@@ -14,6 +14,12 @@ spring:
     minIdle: 1
     maxActive: 1
     maxWait: 100
+  rabbitmq:
+    host: 192.168.11.138
+    port: 5672
+    virtual-host: com.12306
+    username: my12306
+    password: my12306
 mybatis:
   check-config-location: true
   config-location: classpath:mybatis/config/mybatis-config.xml
